@@ -10,7 +10,8 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       remotes: {
-        'micro-fe1': "micro-fe1@http://localhost:4100/microfe1-remoteEntry.js" 
+        'microfe1': "microfe1@http://localhost:4201/microfe1-remoteEntry.js",
+        'microfe2': "microfe2@http://localhost:4202/microfe2-remoteEntry.js",
     },
       shared: {
         "@angular/core": { singleton: true, strictVersion: true }, 

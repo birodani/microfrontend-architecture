@@ -18,8 +18,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
+            "extraWebpackConfig": "./projects/shell/webpack.config.js",
             "outputPath": "dist/shell",
             "index": "projects/shell/src/index.html",
             "main": "projects/shell/src/main.ts",
@@ -69,7 +70,11 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "extraWebpackConfig": "./projects/shell/webpack.config.js",
+            "port": 4200
+                    },
           "configurations": {
             "production": {
               "browserTarget": "shell:build:production"
@@ -121,8 +126,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
+            "extraWebpackConfig": "./projects/micro-f1/webpack.config.js",
             "outputPath": "dist/micro-f1",
             "index": "projects/micro-f1/src/index.html",
             "main": "projects/micro-f1/src/main.ts",
@@ -172,7 +178,11 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "extraWebpackConfig": "./projects/micro-f1/webpack.config.js",
+            "port": 4201                    
+          },
           "configurations": {
             "production": {
               "browserTarget": "micro-f1:build:production"
@@ -224,8 +234,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
+            "extraWebpackConfig": "./projects/micro-f2/webpack.config.js",
             "outputPath": "dist/micro-f2",
             "index": "projects/micro-f2/src/index.html",
             "main": "projects/micro-f2/src/main.ts",
@@ -275,7 +286,11 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "extraWebpackConfig": "./projects/micro-f2/webpack.config.js",
+             "port": 4202       
+                    },
           "configurations": {
             "production": {
               "browserTarget": "micro-f2:build:production"

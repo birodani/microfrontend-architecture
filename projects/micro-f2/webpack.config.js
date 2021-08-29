@@ -2,7 +2,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 module.exports = {
   output: {
-    uniqueName: "micro-fe2",
+    uniqueName: "microfe2",
     publicPath: "auto"
   },
   optimization: {
@@ -11,11 +11,11 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "micro-fe2",
-      library: { type: "var", name: "micro-fe2" },
-      filename: "microfe1-remoteEntry.js",
+      name: "microfe2",
+      library: { type: "var", name: "microfe2" },
+      filename: "microfe2-remoteEntry.js",
       exposes: {
-        './Module': './projects/micro-fe2/src/app/app.module.ts',
+        './Module': './projects/micro-f2/src/app/app.module.ts',
       },
       shared: {
         "@angular/core": { singleton: true, strictVersion: true }, 
